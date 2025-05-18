@@ -1,0 +1,63 @@
+<%= form_for @tweet, html: { multipart: true, class: "tweet-form" } do |f| %>
+  <div class="form-container">
+    <div class="form-row">
+      <label>写真</label>
+      <%= f.file_field :image, class: "form-input image-input" %>
+    </div>
+
+    <div class="form-row">
+      <label>名前</label>
+      <%= f.text_field :name, class: "form-input" %>
+    </div>
+
+    <div class="form-row">
+      <label>場所</label>
+      <%= f.text_field :place, class: "form-input" %>
+    </div>
+
+    <div class="form-row">
+      <label>日付</label>
+      <%= f.datetime_select :memory, class: "form-input" %>
+    </div>
+
+    <div class="form-row stars">
+      <label>星評価</label>
+      <div class="rating">
+        <div class="star-block">
+          <span class="label-text">重要</span>
+          <%= f.radio_button :overall, 5, id: 'star1' %>
+          <label for="star1">★</label>
+        </div>
+        <div class="star-block">
+          <span class="label-text">少し重要</span>
+          <%= f.radio_button :overall, 4, id: 'star2' %>
+          <label for="star2">★</label>
+        </div>
+        <div class="star-block">
+          <span class="label-text">普通</span>
+          <%= f.radio_button :overall, 3, id: 'star3' %>
+          <label for="star3">★</label>
+        </div>
+        <div class="star-block">
+          <span class="label-text">微妙</span>
+          <%= f.radio_button :overall, 2, id: 'star4' %>
+          <label for="star4">★</label>
+        </div>
+        <div class="star-block">
+          <span class="label-text">必要なし</span>
+          <%= f.radio_button :overall, 1, id: 'star5' %>
+          <label for="star5">★</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row submit-btn">
+      <%= f.submit "投稿", class: "submit-button" %>
+    </div>
+  </div>
+<% end %>
+
+<div class="back-link">
+  <%= link_to "一覧に戻る", tweets_path %>
+</div>
+

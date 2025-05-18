@@ -1,0 +1,14 @@
+<body class="index-page">
+  <div class="index-container">
+    <div class="left-text">Tidy up</div>
+    <div class="right-text">Left behind</div>
+
+    <%= image_tag 'road.jpg', class: "index-image" %>
+
+    <div class="button-group">
+      <%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
+      <%= link_to "マイページ", user_path(current_user.id) if user_signed_in? %>
+      <%= link_to "新規投稿", new_tweet_path %>
+    </div>
+  </div>
+</body>

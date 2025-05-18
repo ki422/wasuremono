@@ -1,0 +1,153 @@
+.mypage-wrapper {
+    background: linear-gradient(to bottom, #F2EC91, #ffe4e1);
+    padding: 20px;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  .mypage-wrapper .mypage {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .mypage-wrapper .show {
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: white;
+    padding: 8px;
+    width: fit-content;
+    margin: 5px auto;
+    border-radius: 5px;
+  }
+  
+  .mypage-wrapper .warning {
+    text-align: center;
+    background-color: white;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: fit-content;
+  }
+  
+  .mypage-wrapper .streak {
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .henshu {
+    text-align: center;
+  }
+  
+  .mypage-wrapper .kensaku {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .mypage-wrapper .search-form {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .mypage-wrapper .search1 input {
+    width: 70%;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  .mypage-wrapper .search2 input {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+  
+  .mypage-wrapper .tweet {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff8dc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  
+  .mypage-wrapper .tweet-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .mypage-wrapper .tweet-content {
+    margin-left: 20px;
+    flex: 1;
+  }
+  
+  .mypage-wrapper .tweet-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .mypage-wrapper .tweet-place,
+  .mypage-wrapper .tweet-date,
+  .mypage-wrapper .tweet-rating {
+    margin: 5px 0;
+  }
+  
+  .mypage-wrapper .star-rating {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    color: lightgray;
+  }
+  
+  .mypage-wrapper .star-rating-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #ffd700;
+  }
+  
+  .mypage-wrapper .star-rating-back {
+    color: lightgray;
+  }
+  
+  .mypage-wrapper .tweet-links {
+    margin-top: 10px;
+  }
+  
+  .mypage-wrapper .tweet-links a {
+    margin-right: 10px;
+  }
+  
+  .mypage-wrapper .back-button {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .mypage-wrapper .back-button a {
+    background-color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  .mypage-wrapper .tweet {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff8dc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .mypage-wrapper .tweet:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }

@@ -1,0 +1,97 @@
+.tweet-form {
+    background-color: #e8fff5;
+    padding: 40px;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .form-row label {
+    width: 80px;
+    font-weight: bold;
+  }
+  
+  .form-input {
+    width: 300px;
+    padding: 6px;
+    border: 1px solid #aaa;
+  }
+  
+  .image-input {
+    height: 150px;
+    width: 300px;
+    border: 1px solid #999;
+  }
+  
+  .rating {
+    display: flex;
+    gap: 15px;
+    margin-left: 10px;
+  }
+  
+  .star-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .label-text {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  
+  .rating input[type="radio"] {
+    display: none;
+  }
+  
+  .rating label {
+    font-size: 36px; /* ← 星を大きく */
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .rating input[type="radio"]:checked + label {
+    color: #f39c12;
+  }
+  
+  .submit-button {
+    padding: 8px 15px;
+    border: 1px solid #555;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .back-link {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .back-link a {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .back-link a:hover {
+    background-color: #d9f5e8;
+    color: #000;
+  }

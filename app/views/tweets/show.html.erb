@@ -1,0 +1,17 @@
+<div class="tweet">
+  <p><%= @tweet.name %></p>
+  <%= image_tag @tweet.image_url, size: "250x200" if @tweet.image? %>
+  <p><%= @tweet.place%></p>
+  <p><%= @tweet.memory %></p>
+  <div>
+    <h2>総合評価：
+    <span class="star-rating">
+       <span class="star-rating-front" style="width: <%= getPercent(@tweet.overall) %>%;">★★★★★</span>
+       <span class="star-rating-back">★★★★★</span>
+    </span> 
+    </h2>
+    </div>
+</div>
+
+<%= link_to "Tweet一覧に戻る", tweets_path %>
+<%= link_to "編集する", edit_tweet_path(@tweet.id) %>

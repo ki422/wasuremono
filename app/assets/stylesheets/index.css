@@ -1,0 +1,59 @@
+.index-page {
+    background-color: #eaffea;
+    font-family: "Arial", sans-serif;
+  }
+  
+  .index-page .index-container {
+    text-align: center;
+    padding: 30px;
+    position: relative;
+  }
+  
+  .index-page .index-image {
+    width: 480px;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  .index-page .left-text,
+  .index-page .right-text {
+    position: absolute;
+    top: 120px;
+    font-size: 35px;
+    font-style: italic;
+    text-shadow: 2px 2px 4px #aaa;
+  }
+  
+  .index-page .left-text {
+    left: 100px;
+  }
+  
+  .index-page .right-text {
+    right: 100px;
+    top: 300px;
+  }
+  
+  .index-page .button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+  }
+  
+  .index-page .button-group form,
+  .index-page .button-group a {
+    background-color: #f0f0f0;
+    padding: 10px 25px;
+    border: none;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    box-shadow: 3px 3px 0px #aaa;
+    transition: all 0.3s ease;
+  }
+  
+  .index-page .button-group form:hover,
+  .index-page .button-group a:hover {
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 10px #888;
+  }

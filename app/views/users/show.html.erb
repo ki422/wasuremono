@@ -1,0 +1,59 @@
+<div class="mypage-wrapper">
+  <div class="mypage">マイページ</div>
+
+  <div class="show">名前 : <%= @user.name %></div>
+  <div class="show">メールアドレス : <%= @user.email %></div>
+  <div class="show">プロフィール : <%= @user.profile %></div>
+
+  <% if current_user.kaisuu.present? %>
+    <% if current_user.kaisuu == 1 %>
+      <h1 class="warning">前日の投稿がされていません！</h1>
+    <% else %>
+      <div class="streak">現在の連続投稿回数 <%= current_user.kaisuu %>回</div>
+    <% end %>
+  <% end %>
+
+  <div class="henshu">
+    <% if current_user.id == @user.id %>
+      <%= link_to "編集する", edit_user_registration_path %>
+    <% end %>
+  </div>
+  
+  <div class="kensaku">投稿を検索</div>
+  <%= form_tag({controller:"users",action:"show"}, method: :get, class: "search-form") do %>
+    <div class="search1"><%= text_field_tag :search %></div>
+    <div class="search2"><%= submit_tag '検索する' %></div>
+  <% end %>
+
+  <div class="kensaku">自分の投稿一覧</div>
+  <% @tweets.each do |t| %>
+    <% if @user.id == t.user.id %>
+      <div class="tweet">
+        <div class="tweet-image">
+          <%= image_tag t.image_url, size: "100x100" if t.image? %>
+        </div>
+        <div class="tweet-content">
+          <div class="tweet-name"><%= t.name %></div>
+          <div class="tweet-place">場所：<%= t.place %></div>
+          <div class="tweet-date">日付：<%= t.memory %></div>
+          <div class="tweet-rating">
+            星評価：
+            <span class="star-rating">
+              <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
+              <span class="star-rating-back">★★★★★</span>
+            </span> 
+          </div>
+          <div class="tweet-links">
+            <%= link_to "詳細へ", tweet_path(t.id) %>
+            <%= link_to "編集する", edit_tweet_path(t.id) %>
+            <%= link_to "削除する", tweet_path(t.id), data: { turbo_method: :delete } %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+
+  <div class="back-button">
+    <%= link_to "ホームに戻る", tweets_path %>
+  </div>
+</div>
